@@ -12,6 +12,7 @@ And run the server.
 Users created from seeds:
 
 Admin user: admin@example.com / password
+
 Basic user: example@example.com / password
 
 To edit the forms, go to:
