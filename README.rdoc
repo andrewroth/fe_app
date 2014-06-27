@@ -4,6 +4,7 @@ This is an exmple of how to use the Form Engine with Devise.
 
 To set up:
 
+    bundle install
     rake db:setup
     rake fe_engine:db:seed
 
