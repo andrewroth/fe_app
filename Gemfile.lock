@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/andrewroth/Development/qe
+GIT
+  remote: git://github.com/CruGlobal/qe.git
+  revision: d5bf02e02aa34a8ec57fd166e01ad6d43c053027
+  ref: d5bf02e
   specs:
     fe (0.0.3)
       aasm
@@ -57,9 +59,6 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
-    byebug (3.1.2)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
     carmen (0.2.13)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -68,8 +67,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    columnize (0.8.9)
-    debugger-linecache (1.2.0)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -163,7 +160,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   coffee-rails (~> 4.0.0)
   devise
   fe!

@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'devise'
 
-gem 'fe', github: 'CruGlobal/qe', ref: 'd5bf02e'
+gem 'fe', github: 'CruGlobal/qe', ref: '8283ee7'
 #gem 'fe',
 #    path: '/Users/andrewroth/Development/qe'
 
