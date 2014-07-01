@@ -9,16 +9,13 @@ To set up:
 
 And run the server.
 
+To fill out the form, just go to the root and use the basic user
+
+To edit the forms, go to /fe/admin/question_sheets as the admin user
+
+== Users
+
 Users created from seeds:
 
-Admin user: admin@example.com / password
-
 Basic user: example@example.com / password
-
-To edit the forms, go to:
-
-    /fe/admin/question_sheets
-
-and log in with email "admin@example.com", password "password"
-
-To see only the public form, log in with email "example@example.com" (going to /fe/admin/question_sheets as that user will boot you back to the public form with an Access Denied message)
+Admin user: admin@example.com / password
