@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  match '/auth/:provider/callback' => 'sessions#create', via: :get
+  match '/auth/:provider/logout' => 'sessions#logout_callback', via: :get
+  match '/auth/failure' => 'sessions#failure', via: :get
+  match '/logout' => "sessions#destroy", :as => :logout, via: [:get, :post, :delete]
+  resources :sessions
 
-  root :to => 'info_pages#index', via: [:get, :post]
-  match '/info_pages' => 'info_pages#index', via: [:get, :post]
-  match '/info_pages/index' => 'info_pages#index', via: [:get, :post]
-  match '/info_pages/home' => 'info_pages#home', via: [:get, :post]
-  match '/info_pages/instructions' => 'info_pages#instructions', via: [:get, :post]
+  resources :applications
+  root 'applications#index'
 end

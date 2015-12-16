@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FeApp3</title>
+  <title>FeApp6</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div>
+    <%= link_to 'Fill out Applications', applications_path %>
+    <%= link_to 'Admin Applications', fe_admin_question_sheets_path %>
+    <%= link_to 'Admin Email Templates', fe_admin_email_templates_path %>
+    <hr/>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

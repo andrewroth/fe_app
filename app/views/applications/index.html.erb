@@ -1,0 +1,25 @@
+<% if current_person.applications.any? %>
+  <div>
+    Started Applications:
+
+    <ul>
+      <% current_person.applications.each do |app| %>
+        <li><%= link_to app.question_sheets.first.label, edit_fe_answer_sheet_path(app) %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div>
+  <div>Start a new form:</div>
+
+  <% if @question_sheets.any? %>
+    <ul>
+      <% @question_sheets.each do |sheet| %>
+        <li><%= link_to sheet.label, applications_path(question_sheet_id: sheet.id), method: :post %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <i>No sheets created</i>
+  <% end %>
+</div>

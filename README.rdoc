@@ -1,22 +1,28 @@
 == README
 
-This is an exmple of how to use the Form Engine with Devise.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-To set up:
+Things you may want to cover:
 
-    bundle install
-    rake db:setup
-    rake fe_engine:db:seed
+* Ruby version
 
-And run the server.
+* System dependencies
 
-To fill out the form, just go to the root and use the basic user
+* Configuration
 
-To edit the forms, go to /fe/admin/question_sheets as the admin user
+* Database creation
 
-== Users
+* Database initialization
 
-Users created from seeds:
+* How to run the test suite
 
-Basic user: example@example.com / password
-Admin user: admin@example.com / password
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
