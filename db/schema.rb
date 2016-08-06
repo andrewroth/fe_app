@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216194123) do
+ActiveRecord::Schema.define(version: 20160805223429) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "person_id"
@@ -100,12 +100,12 @@ ActiveRecord::Schema.define(version: 20151216194123) do
 
   create_table "fe_elements", force: :cascade do |t|
     t.integer  "question_grid_id"
-    t.string   "kind",                      limit: 40,                  null: false
-    t.string   "style",                     limit: 40
-    t.string   "label",                     limit: 255
+    t.string   "kind",                             limit: 40,                  null: false
+    t.string   "style",                            limit: 40
+    t.string   "label",                            limit: 255
     t.text     "content"
     t.boolean  "required"
-    t.string   "slug",                      limit: 36
+    t.string   "slug",                             limit: 36
     t.integer  "position"
     t.string   "object_name"
     t.string   "attribute_name"
@@ -113,7 +113,7 @@ ActiveRecord::Schema.define(version: 20151216194123) do
     t.string   "value_xpath"
     t.string   "text_xpath"
     t.string   "cols"
-    t.boolean  "is_confidential",                       default: false
+    t.boolean  "is_confidential",                              default: false
     t.string   "total_cols"
     t.string   "css_id"
     t.string   "css_class"
@@ -122,8 +122,8 @@ ActiveRecord::Schema.define(version: 20151216194123) do
     t.integer  "related_question_sheet_id"
     t.integer  "conditional_id"
     t.text     "tooltip"
-    t.boolean  "hide_label",                            default: false
-    t.boolean  "hide_option_labels",                    default: false
+    t.boolean  "hide_label",                                   default: false
+    t.boolean  "hide_option_labels",                           default: false
     t.integer  "max_length"
     t.string   "conditional_type"
     t.text     "conditional_answer"
@@ -131,7 +131,13 @@ ActiveRecord::Schema.define(version: 20151216194123) do
     t.text     "label_translations"
     t.text     "tip_translations"
     t.text     "content_translations"
-    t.boolean  "share",                                 default: false
+    t.boolean  "share",                                        default: false
+    t.text     "rating_before_label"
+    t.text     "rating_after_label"
+    t.text     "rating_na_label"
+    t.text     "rating_before_label_translations"
+    t.text     "rating_after_label_translations"
+    t.text     "rating_na_label_translations"
   end
 
   add_index "fe_elements", ["conditional_id"], name: "index_fe_elements_on_conditional_id"
@@ -204,6 +210,8 @@ ActiveRecord::Schema.define(version: 20151216194123) do
     t.datetime "updated_at"
     t.string   "locale",                    default: "en"
     t.integer  "question_sheet_id"
+    t.boolean  "visible"
+    t.string   "visibility_cache_key"
   end
 
   add_index "fe_references", ["applicant_answer_sheet_id"], name: "index_fe_references_on_applicant_answer_sheet_id"

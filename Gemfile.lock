@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/CruGlobal/fe.git
-  revision: c237d8e407f8c558e29f1c6e9df82d68f8a94a4a
+  revision: 45b7efb89e4f579e2892fafa2053d42ba37c030f
   branch: master
   specs:
     fe (1.0.0)
@@ -12,7 +12,7 @@ GIT
       jquery-rails
       jquery-ui-rails
       liquid
-      rails (>= 3.1.0)
+      rails (~> 4.2)
       sass
       validates_email_format_of
 
@@ -24,6 +24,14 @@ GIT
       addressable (~> 2.3)
       nokogiri (~> 1.6.6.2)
       omniauth (~> 1.2.0)
+
+GIT
+  remote: git://github.com/brentd/xray-rails.git
+  revision: e218695e68a838d6d05312182b62629fa6c89d68
+  specs:
+    xray-rails (0.1.21)
+      coffee-rails
+      rails (>= 3.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -83,23 +91,23 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    concurrent-ruby (1.0.0)
+    concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.6.0)
-    fast_gettext (1.0.0)
+    fast_gettext (1.2.0)
     gettext_i18n_rails (1.2.3)
       fast_gettext (>= 0.9.0)
-    globalid (0.3.6)
+    globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.4.3)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-rails (4.0.5)
-      rails-dom-testing (~> 1.0)
+    jquery-rails (4.1.1)
+      rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
@@ -108,11 +116,13 @@ GEM
     liquid (3.0.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
-    mime-types (2.99)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_portile (0.6.2)
-    minitest (5.8.3)
+    minitest (5.9.0)
     multi_json (1.11.2)
     nokogiri (1.6.6.4)
       mini_portile (~> 0.6.0)
@@ -139,16 +149,16 @@ GEM
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
-    rails-html-sanitizer (1.0.2)
+    rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     railties (4.2.5)
       actionpack (= 4.2.5)
       activesupport (= 4.2.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.4.2)
+    rake (11.2.2)
     rdoc (4.2.0)
-    sass (3.4.20)
+    sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
@@ -159,13 +169,13 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     spring (1.6.0)
-    sprockets (3.5.2)
+    sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (2.3.3)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      sprockets (>= 2.8, < 4.0)
+    sprockets-rails (3.1.1)
+      actionpack (>= 4.0)
+      activesupport (>= 4.0)
+      sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -208,6 +218,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  xray-rails!
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

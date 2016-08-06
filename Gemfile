@@ -42,6 +42,9 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  # Useful when working on views
+  gem 'xray-rails', github: 'brentd/xray-rails'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -51,7 +54,7 @@ gem 'bootstrap-datepicker-rails'
 
 gem 'fe',
   github: 'CruGlobal/fe', branch: 'master'
-  # path: '/Users/andrewroth/Development/fe'
+  # path: '/Users/Andrew/Development/fe'
 
 gem 'omniauth', '~> 1.2.0'
 gem 'omniauth-cas', github: 'CruGlobal/omniauth-cas' # has single sign out fix
